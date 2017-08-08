@@ -1,0 +1,29 @@
+name: potionArrow
+main: io.github.theguy191919.potionarrow.PotionArrow
+version: 1.0
+description: This is a plugin that adds more fun commands.
+author: TheGuy191919
+website: TheGuy191919.github.io
+
+commands: 
+    PotionArrow:
+      description: This is the command for everything in PotionArrow Plugin.
+      usage: do "/PotionArrow help" to get more info
+      permission: PotionArrow.PotionArrow
+
+permissions:
+    PotionArrow.*:
+      describtion: The sub commands and permission for all of them.
+      children: 
+        PotionArrow.PotionArrow: true
+        PotionArrow.PotionArrow.Disable: true
+        PotionArrow.PotionArrow.Help: true
+        PotionArrow.PotionArrow.About: true
+    PotionArrow.PotionArrow.Disable:
+      describtion: The command to disable the plugin.
+      default: op
+    PotionArrow.PotionArrow.Help: 
+      describtion: The command to show the list of commands.
+      default: op
+    PotionArrow.PotionArrow.About:
+      describtion: The command to know more about this mod.
